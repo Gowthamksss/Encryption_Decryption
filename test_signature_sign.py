@@ -37,6 +37,10 @@ def test_api_signature(setup_file):
             }
 
             response = requests.post(url, headers=headers, files=files)
+            # Print response details for debugging or logging
+            print(f'Response Status Code: {response.status_code}')
+            print('Response Headers:', response.headers)
+            print('Response Body:', response.json())
 
         assert response.status_code == 200, "API call failed or returned non-200 status code."
         assert 'application/json' in response.headers['Content-Type'], "Response is not in JSON format."
