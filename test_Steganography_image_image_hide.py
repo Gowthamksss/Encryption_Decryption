@@ -10,9 +10,9 @@ def get_file_mimetype(file_path):
 @pytest.fixture
 def setup_files():
     api_key = 'YFTMeUIB78LtBbM4gC3jnM3qlYhqwfo0'
-    cover_image_path = 'samplefiles/Sample2mb.jpg'
-    secret_image_path = 'samplefiles/2.7mb.jpg'  
-    output_path = 'Sample_output/embadedlarge2_image_image_hide.png' 
+    cover_image_path = 'test_pytest/Sampleimagefiles/earth.jpg'
+    secret_image_path = 'test_pytest/Sampleimagefiles/table.jpeg'  
+    output_path = 'test_pytest/Sample_output/embaded_image_image_hide.png' 
     return cover_image_path, secret_image_path, output_path, api_key
 
 def test_upload_files_and_download_result(setup_files):
